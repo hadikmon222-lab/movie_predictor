@@ -80,7 +80,7 @@ if st.button("🔮 Predict Movie Rating", type="primary"):
         
         try:
             # Generate the prediction
-            prediction = model.predict(input_data)
+            prediction = model.predict(popularity_class)
             
             # Constrain predictions to standard rating boundaries if outliers occur
             predicted_rating = max(0.0, min(10.0, prediction[0]))
