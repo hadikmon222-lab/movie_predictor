@@ -32,8 +32,8 @@ release_day   = st.number_input("Release Day",
                 value=23)
 
 if st.button("Predict"):
-    # TF-IDF transform overview
-    overview_vec = tfidf.transform([overview]).toarray()
+    # counter vector transform overview
+    overview_vec = cv.transform([overview]).toarray()
     prediction   = model.predict(overview_vec)[0]
 
     st.subheader("Prediction Result:")
