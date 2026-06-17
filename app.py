@@ -9,9 +9,9 @@ def load_model():
     # Make sure 'best_model.pkl' is saved from your notebook using:
     # joblib.dump(your_best_model, 'best_model.pkl')
     try:
-        return joblib.load('best_model.pkl')
+        return joblib.load('log_reg_model.pkl')
     except FileNotFoundError:
-        st.error("Error: 'best_model.pkl' not found. Please dump your model from Colab and place it in this directory.")
+        st.error("Error: 'log_reg_model.pkl' not found. Please dump your model from Colab and place it in this directory.")
         return None
 
 model = load_model()
